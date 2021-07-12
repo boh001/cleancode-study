@@ -26,7 +26,7 @@ if (employee.isEligibleForFullBenefits())
 ```
 <br/>
 
-### 좋은 주석의 예
+## 좋은 주석의 예
 
 1) 법적인 주석
     - 각 소스 파일 첫머리에 주석으로 들어가는 저작권 정보와 소유권 정보
@@ -124,7 +124,7 @@ return buildList(text.substring(match.end()));
 ```
 <br/>
 
-### 나쁜 주석의 예
+## 나쁜 주석의 예
 
 1) 주절거리는 주석
    - 특별한 이유 없이 의무감으로 혹은 마지못해 달은 주석
