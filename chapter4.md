@@ -35,8 +35,7 @@ if (employee.isEligibleForFullBenefits())
 ```java
 // Copyright (c) 2003,2004,2005 by Object Mentor, Inc. All rights reserved.
 // GNU General Public License 버전 2 이상을 따르는 조건을 배포한다.
-```
-<br/>
+```<br/>
 
 2) 정보를 제공하는 주석
     - 기본적인 정보를 주석으로 제공
@@ -57,18 +56,14 @@ protected abstract Responder responderBeingTested();
     - 주석은 구현을 이해하게 도와주는 선을 넘어 결정에 깔린 의도까지 설명한다
     
 ```java
-public int compareTo(Object o)
-{
-
-  if(o instanceof WikiPagePath)
-  {
-    WikiPagePath p=(WikiPagePath)o;
-    String compressedName=StringUtil.join(names,"");
-    String compressedArgumentName=StringUtil.join(p.names,"");
-    return compressedName.compareTo(compressedArgumentName);
-  }
-  return 1; // 오른쪽 유형이므로 정렬 순위가 더 높다.
+// 스레드를 대량 생성하는 방법으로 어떻게든 경쟁조건을 만들려 시도한다.
+for (int i = 0; i < 2500; i++) {
+  WidgetBuilderThread widgetBuilderThread = 
+    new WidgetBuilderThread(widgetBuilder, text, parent, failFlag);
+  Thread thread = new Thread(widgetBuilderThread);
+  thread.start();
 }
+
 ```
 <br/>
 
